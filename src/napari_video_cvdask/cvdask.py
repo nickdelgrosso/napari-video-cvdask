@@ -29,7 +29,7 @@ def get_frame(cap: cv2.VideoCapture, idx: int, *, lock: Lock = Lock()) -> np.nda
     with lock:  # prevent anything else from happening during reading
         cap.set(cv2.CAP_PROP_POS_FRAMES, idx)
         valid, frame = cap.read()
-        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     return frame
 
 
