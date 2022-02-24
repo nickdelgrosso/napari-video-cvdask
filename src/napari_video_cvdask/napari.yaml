@@ -1,0 +1,11 @@
+name: napari-video-cvdask
+display_name: napari VideoCVDask
+contributions:
+  commands:
+    - id: napari-video-cvdask.get_reader
+      python_name: napari_video_cvdask._reader:napari_get_reader
+      title: Open data with napari VideoCVDask  
+  readers:
+    - command: napari-video-cvdask.get_reader
+      accepts_directories: false
+      filename_patterns: ['*.npy']  
