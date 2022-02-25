@@ -7,7 +7,7 @@
 [![codecov](https://codecov.io/gh/nickdelgrosso/napari-video-cvdask/branch/main/graph/badge.svg)](https://codecov.io/gh/nickdelgrosso/napari-video-cvdask)
 [![napari hub](https://img.shields.io/endpoint?url=https://api.napari-hub.org/shields/napari-video-cvdask)](https://napari-hub.org/plugins/napari-video-cvdask)
 
-A Video File Reader that uses OpenCV2 and Dask Arrays
+A Video File Reader that used to use OpenCV2 and Dask Arrays, and now uses dask-image, which does the same thing but better.  (Pro-tip, never name a package after its dependencies!)
 
 ----------------------------------
 
