@@ -1,7 +1,6 @@
 from glob import glob
 
 from pytest import mark
-import numpy as np
 
 from napari_video_cvdask import napari_get_reader
 

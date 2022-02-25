@@ -1,8 +1,6 @@
 from typing import Tuple, List, Dict, Union
 
-from dask.array import Array
-
-from .cvdask import dask_array_from_filename
+from dask_image.imread import imread
 
 
 def napari_get_reader(path):
@@ -17,5 +15,5 @@ def napari_get_reader(path):
 def reader_function(path: Union[str, List[str]]) -> List[Tuple[Array, Dict, str]]:
     """Take a path or list of paths and return a list of LayerData tuples."""
     filenames = [path] if isinstance(path, str) else path
-    return [(dask_array_from_filename(filename=filename), {}, "image") for filename in filenames]
+    return [(imread(filename), {}, "image") for filename in filenames]
 
