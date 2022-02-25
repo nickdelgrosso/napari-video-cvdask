@@ -12,7 +12,7 @@ def napari_get_reader(path):
     return reader_function
 
 
-def reader_function(path: Union[str, List[str]]) -> List[Tuple[Array, Dict, str]]:
+def reader_function(path: Union[str, List[str]]):
     """Take a path or list of paths and return a list of LayerData tuples."""
     filenames = [path] if isinstance(path, str) else path
     return [(imread(filename), {}, "image") for filename in filenames]
